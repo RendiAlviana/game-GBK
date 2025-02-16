@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* background: linear-gradient(0deg, #00ACF6 25%,white 50%, #FF5E59 75%); */
+  background-color: #0a0519;
+  color: #a737ff;
+}
+.container {
+  width: 100vmin;
+  height: 100vh;
+  margin: 0px auto;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* border: 2px solid white; */
+}
+.user {
+  position: absolute;
+  right: 0;
+  top: 0;
+  filter: drop-shadow(0px 0px 20px rgb(214, 207, 207));
+}
+.descripsi {
+  color: aliceblue;
+  position: absolute;
+  z-index: 900;
+  width: 0;
+  height: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #8d00f800;
+}
+.descripsi:target {
+  width: auto;
+  height: auto;
+}
+.isi-descripsi {
+  text-align: center;
+  width: 60%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: rgb(27, 27, 27);
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px gold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  transform: translateY(-600px);
+  transition: 2s;
+}
+.descripsi:target .isi-descripsi {
+  transform: translateY(100px);
+}
+.isi-descripsi .keluar {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  font-size: 30px;
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+.isi-descripsi img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px green;
+  margin-bottom: 10px;
+}
+div.areaCom img {
+  transform: scale(1.1);
+}
+.info {
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 3rem;
+  color: silver;
+  margin-bottom: 10px;
+}
+.tombol {
+  width: 100px;
+  height: 20px;
+  background-color: rgb(215, 215, 215);
+  background-image: url(gambar/play.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px 5px rgb(215, 215, 215), 0px 0px 0px 9px black,
+    0px 0px 0px 12px rgb(98, 185, 69), 0px 0px 0px 14px black;
+  transition: 0.5s;
+}
+.areaPlayer,
+.areaCom {
+  width: 100%;
+  text-align: center;
+  font-family: Sans-Serif;
+}
+.areaPlayer ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.areaPlayer ul li {
+  border: 2px solid #1892ea;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.areaPlayer li,
+.areaCom img {
+  border-radius: 50%;
+  width: 28vmin;
+  height: 28vmin;
+  box-sizing: border-box;
+  border: 2px solid rgb(255, 77, 55);
+  transition: 0.5s;
+}
+.areaPlayer img {
+  filter: brightness(0.4);
+}
+.areaPlayer img.terpilih {
+  filter: brightness(1);
+}
+.kali {
+  font-size: 5rem;
+  position: absolute;
+  color: red;
+  z-index: 100;
+  opacity: 0;
+}
+.score {
+  line-height: 2.5rem;
+  margin: 10px 0;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  transition: 0.25s;
+}
+.score:active {
+  font-size: 3.3rem;
+}
+@media (min-width: 800px) {
+  .areaPlayer ul li,
+  .areaCom img {
+    width: 10vw;
+    height: 10vw;
+  }
+  .info {
+    font-size: 5rem;
+  }
+}
